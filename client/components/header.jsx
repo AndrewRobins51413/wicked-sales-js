@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
 
-function App() {
+class Header extends React.Component {
+  render() {
+    return (
 
-const headRender = <header><h1>The Big Store</h1></header>
-
+      <div>
+        <h1>The Big Store</h1>
+        <button>click</button>
+      </div>
+    );
+  }
 }
-
-ReactDOM.render(
-    headRender,
-    document.getElementById('root')
-);
+export default Header;
