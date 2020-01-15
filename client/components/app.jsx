@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductListItem from './product-list-item';
+import ProductList from './product-list';
 // import Header from './header';
 
 export default class App extends React.Component {
@@ -12,7 +12,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    return <ProductListItem/>;
+    return <ProductList/>;
 
   }
 }
