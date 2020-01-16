@@ -1,5 +1,5 @@
 
-img {
+/* img {
     width: 200px;
     height: 200px;
     margin: 3%;
@@ -27,7 +27,7 @@ li {
     border: 1px solid lightgray;
     text-align-last: center;
     box-shadow: darkgray;
-    list-style: none;
+    list-style: ;
 }  
 
 .contain {
@@ -56,4 +56,4 @@ h7 {
 
 h5 {
     font-size: smaller;
-}
+} */
