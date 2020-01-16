@@ -27,6 +27,7 @@ app.get('/api/products/:productId', (req, res, next) => {
   const parsedID = parseInt(req.params.productId);
   if (isNaN(parsedID)) {
     next(new ClientError('invalid data type', 400));
+    return;
   }
   const sqlGetAll = `select "productId",  
   "name", 
