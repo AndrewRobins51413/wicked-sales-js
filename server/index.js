@@ -17,7 +17,9 @@ app.use(express.json());
 app.get('/api/products/', (req, res, next) => {
   const sqlGet = 'select "productId", "name", "price", "image", "shortDescription" from "products" ';
   db.query(sqlGet)
-    .then(result => res.json(result.rows))
+  
+    .then(result => res.json(result.rows)) // drop the array index so the whole array will req/res
+
     .catch(err => next(err));
 });
 
