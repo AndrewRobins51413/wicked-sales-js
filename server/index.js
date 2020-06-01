@@ -29,13 +29,13 @@ app.get('/api/products/:productId', (req, res, next) => {
     next(new ClientError('invalid data type', 400));
     return;
   }
-  const sqlGetAll = `select "productId",  
-  "name", 
-  "price", 
-  "image", 
-  "shortDescription", 
-  "longDescription" 
-  from "products" 
+  const sqlGetAll = `select "productId",
+  "name",
+  "price",
+  "image",
+  "shortDescription",
+  "longDescription"
+  from "products"
   where "productId" = $1`; // $1 is a security measure read as "use the first parameter" also, first item in params array
   const params = [req.params.productId];
 

@@ -5,8 +5,10 @@ class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: []
+      products: [],
+      isClicked: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -18,30 +20,19 @@ class ProductList extends React.Component {
       .catch(error => `${error}`);
   }
 
-  //   <div className="container">
-  //     <div className="row">
-  //       {
-  //         this.state.products.map(index => (
-  //           <li key={index.image} >
-  //             <img className="card-img-top contain" src={index.image} alt="..."></img>
-  //             <h7 className="card-body">{index.price}</h7>
-  //             <h6 className="card-text">{index.shortDescription}</h6>
-  //             <h5 className="card-title">{index.name} <a href="#" className="card-link">Card link</a></h5>
-  //           </li>
-  //         ))
-  //       }
-  //     </div>
-  // </div>
+  handleClick() {
+    setView(props);
+  }
 
   render() {
     return (
       <div id="root">
         <div className="container .container-fluid ">
           <div className="row">
+            <button onClick={this.props.handleClick}></button>
             {
               this.state.products.map(product => (
-                <ProductListItem key={product.productId} productData={product}>
-                </ProductListItem>
+                <ProductListItem key={product.productId} productData={product}></ProductListItem>
               ))
             }
           </div>
