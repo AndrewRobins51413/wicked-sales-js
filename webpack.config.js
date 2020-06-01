@@ -34,9 +34,11 @@ module.exports = {
     host: '0.0.0.0',
     port: process.env.DEV_SERVER_PORT,
     proxy: {
-      '/api': `http://localhost:${process.env.PORT}`
+      '/api': 'http://localhost:3000'
     },
     stats: 'minimal',
     watchContentBase: true
   }
 };
+
+//${process.env.PORT}

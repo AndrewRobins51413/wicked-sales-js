@@ -32,8 +32,7 @@ class ProductList extends React.Component {
             <button onClick={this.props.handleClick}></button>
             {
               this.state.products.map(product => (
-                <ProductListItem key={product.productId} productData={product}>
-                </ProductListItem>
+                <ProductListItem key={product.productId} productData={product}></ProductListItem>
               ))
             }
           </div>
